@@ -2,7 +2,14 @@
 
 En este directorio nos enfocamos en el tratamiento, procesamiento y análisis de imágenes solares. Nuestro objetivo final es generar bases de datos detalladas, donde cada entrada está asociada con una estampa de tiempo y los siguientes parámetros calculados de las imágenes:
 
-- Entropía
+### Entropía
+La entropía es un concepto que cuantifica el nivel de desorden o imprevisibilidad de un conjunto de datos. La entroía se utiliza frecuentemente en el conteto de fotografías para analizar la complejidad o la riqueza de la información contenida en ellas.  Esta se calcula como: $H = -\sum(p_k * \log_2(p_k))$ donde $p_k$ es la intensidad de color normalizada en el pixel $k$ en la imagen, la normalización se toma del valor máximo en el píxel. 
+
+**Referencias:**
+1. Shannon, C.E. (1948), A Mathematical Theory of Communication. Bell System Technical Journal, 27: 379-423. https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
+2. Thomas M. Cover and Joy A. Thomas. 2006. Elements of Information Theory (Wiley Series in Telecommunications and Signal Processing). Wiley-Interscience, USA.
+
+
 - Media
 - Desviación Estándar
 - Dimensión Fractal

@@ -35,3 +35,34 @@ def get_image_urls(start: str, end: str, image_type: str = 'hmiigr', frequency: 
         urls.append(url)
         
     return urls
+
+
+
+from typing import List
+import numpy as np
+import cv2
+
+def calculate_probabilities(image: np.ndarray) -> np.ndarray:
+    """
+    Calculate the probabilities of occurrence of each intensity level in an image.
+
+    Parameters
+    ----------
+    image : np.ndarray
+        Input image in BGR color space.
+
+    Returns
+    -------
+    probabilities : np.ndarray
+        Array of probabilities for each intensity level in the grayscale image.
+    """
+    # Convert the image to grayscale
+    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Compute the histogram of the grayscale image
+    histogram, _ = np.histogram(gray_image.ravel(), bins=256, range=[0,256])
+
+    # Calculate probabilities
+    probabilities = histogram / histogram.sum()
+
+    return probabilities
