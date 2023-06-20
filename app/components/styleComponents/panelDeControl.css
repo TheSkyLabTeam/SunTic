@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Defining the active and unactive state of the control panel*/
+
+.panelDeControl.active {
+    @apply h-96 md:h-[62vh]
+    
+}
+
+.panelDeControl.un-active {
+    @apply h-14 md:h-16
+}
+
+#panelTitle.un-active {
+    @apply hidden
+}
+
+/* control panel title: Unactivaded*/
+
+.panelTitleContainer.un-active {
+    @apply flex flex-row h-full align-middle justify-center
+}
+
+/* Resume panel elements: UnActivaded*/
+
+#resumePanelElements.active {
+    @apply hidden
+}
+
+.MuiTypography-root {
+    font-family: 'Montserrat';
+    text-transform: initial;
+}
+
+.MuiButtonBase-root {
+    font-family: 'Montserrat';
+    text-transform: initial;
+}
+
+.MuiPickersCalendarHeader-label {
+    font-family: 'Montserrat';
+}
+
+/* Styles for the Date Picker */
+
+.MuiPickersLayout-root {
+    @apply bg-primary border-2 border-on-primary rounded-3xl 
+}
+
+.MuiPickersCalendarHeader-label {
+    @apply text-on-primary
+}
+
+.MuiPickersDay-root.Mui-selected {
+    @apply bg-on-primary text-primary
+}
+
+.MuiPickersDay-root.Mui-selected:hover {
+    @apply bg-on-primary text-primary
+}
+
+.MuiTypography-root {
+    @apply text-on-primary
+}
+
+.MuiButtonBase-root {
+    @apply text-on-primary
+}
+
+/* panelToolsContainer: Unactive & active state */
+
+#panelToolsContianer.active {
+    @apply flex transition-all delay-200 opacity-100
+}
+
+#panelToolsContainer.un-active {
+    @apply hidden opacity-0 transition-all delay-200
+}
