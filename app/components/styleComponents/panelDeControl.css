@@ -5,12 +5,12 @@
 /* Defining the active and unactive state of the control panel*/
 
 .panelDeControl.active {
-    @apply h-96 md:h-[62vh]
+    @apply h-96 lg:h-[52vh] xl:h-[52vh]
     
 }
 
 .panelDeControl.un-active {
-    @apply h-14 md:h-16
+    @apply h-14 xl:h-16
 }
 
 #panelTitle.un-active {
@@ -30,23 +30,23 @@
 }
 
 .MuiTypography-root {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     text-transform: initial;
 }
 
 .MuiButtonBase-root {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     text-transform: initial;
 }
 
 .MuiPickersCalendarHeader-label {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Styles for the Date Picker */
 
 .MuiPickersLayout-root {
-    @apply bg-primary border-2 border-on-primary rounded-3xl 
+    @apply lg:h-[44vh] xl:h-[52vh] bg-primary border-2 border-on-primary rounded-3xl 
 }
 
 .MuiPickersCalendarHeader-label {

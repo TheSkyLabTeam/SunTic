@@ -54,16 +54,16 @@ export default function PanelDeControl() {
         <div className={`panelDeControl ${state} flex flex-col gap-2 w-full p-4 sticky top-[92vh] rounded-xl bg-primary transition-all duration-300`}>
             <div className="flex text-on-primary font-semibold justify-between" id="simplePanelContainer">
                 <div className={`panelTitleContainer ${state}`}>
-                    <h1 id="panelTitle" className=" w-60">Panel de control</h1>
+                    <h1 id="panelTitle" className=" xl:w-60">Panel de control</h1>
                     {/* Elements that will be displayed when the state is un-active*/}
                     <div id="resumePanelElements" className={`flex flex-col w-full ${state}`}>
-                        <div id="resumeDisplayImage" className=" w-48 h-8 border rounded-lg"></div>
+                        <div id="resumeDisplayImage" className="xl:w-48 xl:h-8 border rounded-lg"></div>
                     </div>
                 </div>
                 <button className="w-8 h-8 bg-primary-container rounded-full" onClick={changeState}></button>
             </div>
             <div id="panelToolsContainer" className={`flex flex-row gap-4 ${state}`}>
-                <div id="ImageDisplay" className=" h-96 w-96 border-on-primary border-2 rounded-3xl"></div>
+                <div id="ImageDisplay" className="xl:h-96 xl:w-96 border-on-primary border-2 rounded-3xl"></div>
                 <StaticDatePicker defaultValue={date} onChange={setDate} orientation="landscape"/>
             </div>
         </div>
